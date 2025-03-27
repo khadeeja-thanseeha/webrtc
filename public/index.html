@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Video Conference</title>
+    <link rel="shortcut icon" type="image/ico" href="css/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Virtual Consultation Platform</h1>
+        </header>
+
+        <div class="controls">
+            <button id="createRoomBtn" class="btn create">Create Room</button>
+            <input id="roomId" type="text" placeholder="Enter Room ID">
+            <button id="joinBtn" class="btn join">Join Room</button>
+            <button id="leaveBtn" class="btn leave">Leave Room</button>
+        </div>
+
+        <p id="notification" class="notification"></p>
+
+        <div id="localVideo-container">
+            <video autoplay playsinline muted></video>
+        </div>
+
+        <div id="videos">
+            <div id="videoGrid" class="grid-container"></div>
+        </div>
+
+        <div class="media-controls">
+            <button id="muteAudioBtn" class="btn audio">Audio</button>
+            <button id="toggleVideoBtn" class="btn video">Video</button>
+        </div>
+
+    </div>
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="http://localhost:5173/socket.io/socket.io.js"></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="/webrtc-html/webrtc-video-conference-main/public/js/webrtc.js" type="module"></script>
+    <script src="/webrtc-html/webrtc-video-conference-main/public/js/main.js" type="module"></script>
+</body>
+</html>
